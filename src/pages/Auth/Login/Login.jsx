@@ -37,7 +37,15 @@ export default function Login() {
       });
       navigate("/");
       window.location.reload();
-    } else {
+    } else if(form.username === "member" && form.password === "member123") {
+      authService.login({
+        username: "member",
+        role: "MEMBER",
+        fullName: "MEMBER",
+      });
+      navigate("/");
+      window.location.reload();
+    }else{
       alert("Sai tài khoản hoặc mật khẩu!");
     }
 

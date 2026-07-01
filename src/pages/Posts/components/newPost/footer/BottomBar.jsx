@@ -12,7 +12,7 @@ export default function BottomActionBar({
 }) {
   const user = authService.getCurrentUser();
   const isAdmin = user?.role === "ADMIN";
-
+  
   return (
     <div className="bottom-bar">
       <button className="preview-btn" onClick={onPreview}>
