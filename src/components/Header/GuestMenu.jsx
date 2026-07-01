@@ -1,4 +1,4 @@
-import Button from "../Common/Button/Button";
+import Button from "../common/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function GuestMenu() {
