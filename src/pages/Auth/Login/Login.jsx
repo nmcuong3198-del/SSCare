@@ -35,7 +35,7 @@ export default function Login() {
         role: "ADMIN",
         fullName: "Administrator",
       });
-      navigate("/home");
+      navigate("/");
       window.location.reload();
     } else {
       alert("Sai tài khoản hoặc mật khẩu!");
