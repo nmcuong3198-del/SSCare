@@ -1,0 +1,26 @@
+@import "./reset.css";
+@import "./variables.css";
+
+body{
+
+    font-family:Inter,Arial,sans-serif;
+
+    color:var(--text);
+
+    background:white;
+
+}
+
+.container{
+
+    width:1200px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:80px 0;
+
+}

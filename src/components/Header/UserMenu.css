@@ -1,0 +1,51 @@
+.user-menu{
+
+    position:relative;
+
+}
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.dropdown{
+
+    position:absolute;
+
+    top:60px;
+
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    border-radius:10px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+}
+
+.dropdown div{
+
+    padding:15px 20px;
+
+    cursor:pointer;
+
+}
+
+.dropdown div:hover{
+
+    background:#F5F5F5;
+
+}

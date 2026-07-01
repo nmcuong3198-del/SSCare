@@ -1,0 +1,307 @@
+.download-section{
+
+    background:#163C92;
+
+    padding:90px 0;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+.download-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.download-left{
+
+    flex:1;
+
+}
+
+.download-left h2{
+
+    font-size:56px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+.download-left p{
+
+    font-size:18px;
+
+    color:#d9e3ff;
+
+    line-height:1.8;
+
+    max-width:520px;
+
+}
+
+.qr-wrapper{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.qr-card{
+
+    background:white;
+
+    width:170px;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.qr-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.qr-card img{
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+.qr-card h4{
+
+    margin-top:18px;
+
+    color:#173d8f;
+
+}
+
+.download-right{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex:1;
+}
+
+/* Điện thoại */
+.phone{
+    position:relative;
+    width:300px;
+    height:600px;
+    border-radius:45px;
+    border:5px solid rgba(255,255,255,.18);
+    background:#1f3f99;
+    box-shadow:
+        inset 0 0 0 5px rgba(255,255,255,.05),
+        0 15px 35px rgba(0,0,0,.25);
+}
+
+/* Tai thỏ */
+.phone-notch{
+    position:absolute;
+    top:12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100px;
+    height:24px;
+    background:#16357f;
+    border-radius:0 0 15px 15px;
+}
+
+/* Màn hình */
+.phone-screen{
+    position:absolute;
+    top:15px;
+    left:15px;
+    right:15px;
+    bottom:15px;
+
+    border-radius:35px;
+    background:#2949b6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* Icon */
+.phone-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.phone-screen h3{
+    font-size:30px;
+    margin:10px 0;
+    font-weight:700;
+}
+
+.phone-screen p{
+    color:#d8dffb;
+    line-height:1.7;
+    font-size:17px;
+}
+
+.phone::before{
+    content:"";
+    position:absolute;
+
+    inset:-6px;
+
+    border-radius:50px;
+
+    border:3px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 0 18px rgba(255,255,255,.18),
+        0 0 35px rgba(255,255,255,.08);
+
+    pointer-events:none;
+}
+
+.phone::after{
+    content:"";
+    position:absolute;
+    right:-5px;
+    top:160px;
+    width:5px;
+    height:90px;
+    background:rgba(255,255,255,.18);
+    border-radius:0 5px 5px 0;
+}
+
+.phone-icon img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.download-right img{
+
+    width:350px;
+
+    filter:drop-shadow(0 25px 45px rgba(0,0,0,.3));
+
+}
+
+.phone-text{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-10%);
+
+    text-align:center;
+
+}
+
+.phone-text h3{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.phone-text p{
+
+    color:#d6ddff;
+
+    line-height:1.8;
+
+/* chéo ở footer */
+}.download-section{
+
+    position:relative;
+
+}
+
+/* .download-section::before{
+    content:"";
+    position:absolute;
+
+    top:-300px;
+    right:-120px;
+
+    width:920px;
+    height:1700px;
+
+    background:rgba(255,255,255,.08);
+
+    transform:skewX(-28deg);
+
+    z-index:5;
+} */
+
+.download-container{
+    position:relative;
+    z-index:6;
+}
+
+.download-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-160px;
+
+    top:-160px;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(255,255,255,.03);
+
+    border-radius:50%;
+
+}
+
+/* animation qr */
+.qr-card,
+.testimonial-card,
+.hero-btn,
+.login-btn{
+
+    transition:.35s ease;
+
+}
+
+.qr-card:hover,
+.testimonial-card:hover{
+
+    box-shadow:0 25px 50px rgba(0,0,0,.18);
+
+}
