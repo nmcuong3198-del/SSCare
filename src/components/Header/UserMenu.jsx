@@ -18,7 +18,7 @@ export default function UserMenu() {
 
         authService.logout();
 
-        navigate("/home");
+        navigate("/");
 
         window.location.reload();
 
