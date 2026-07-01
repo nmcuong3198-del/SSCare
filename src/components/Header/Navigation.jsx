@@ -3,7 +3,7 @@ import { authService } from "../../services/authService";
 const menus = [
   {
     title: "Trang chủ",
-    path: "/home",
+    path: "/",
   },
   {
     title: "Về chúng tôi",
@@ -28,7 +28,7 @@ export default function Navigation() {
 
   const visibleMenus = user
     ? menus
-    : menus.filter((menu) => menu.path === "/home" || menu.path === "/about" || menu.path === "/download");
+    : menus.filter((menu) => menu.path === "/" || menu.path === "/about" || menu.path === "/download");
   return (
     <nav className="navigation">
       <ul className="nav-menu">

@@ -54,14 +54,16 @@ export default function Login() {
       <div className="login-right">
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Tên đăng nhập</label>
+            <label htmlFor="username">Tên đăng nhập</label>
 
             <div className="input-box">
               <FaUser />
 
               <input
+                id="username"
                 type="text"
                 name="username"
+                autoComplete="username"
                 placeholder="Email hoặc số điện thoại"
                 value={form.username}
                 onChange={handleChange}
@@ -70,14 +72,16 @@ export default function Login() {
           </div>
 
           <div className="form-group">
-            <label>Mật khẩu</label>
+            <label htmlFor="password">Mật khẩu</label>
 
             <div className="input-box">
               <FaLock />
 
               <input
+                id="password"
                 type={showPassword ? "text" : "password"}
                 name="password"
+                autoComplete="current-password"
                 placeholder="Nhập mật khẩu"
                 value={form.password}
                 onChange={handleChange}

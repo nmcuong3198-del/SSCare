@@ -95,3 +95,40 @@
     color:#163C92;
 
 }
+
+.admin-actions{
+    display:flex;
+    gap:12px;
+}
+
+.reject-btn,
+.approve-btn{
+    min-width:150px;
+    height:48px;
+    border:none;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.reject-btn{
+    background:#D32F2F;
+}
+
+.reject-btn:hover{
+    background:#B71C1C;
+}
+
+.approve-btn{
+    background:#13388C;
+}
+
+.approve-btn:hover{
+    background:#0D2F75;
+}

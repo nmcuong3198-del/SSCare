@@ -11,7 +11,7 @@ export default function Mission() {
         <h3>Sứ mệnh của SSCare</h3>
 
         <h2>
-          Đồng hành cùng <span>1 triệu gia đình Việt Nam</span> giúp trẻ tuổi
+          Đồng hành cùng 1 triệu gia đình Việt Nam giúp trẻ tuổi
           dậy thì trưởng thành khỏe mạnh, tự tin và hạnh phúc.
         </h2>
 

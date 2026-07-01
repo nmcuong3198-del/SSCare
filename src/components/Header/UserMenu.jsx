@@ -1,80 +1,63 @@
 import "./UserMenu.css";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUserCircle, FaChevronDown } from "react-icons/fa";
 
 import { authService } from "../../services/authService";
 
 export default function UserMenu() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const user = authService.getCurrentUser();
 
-    const user = authService.getCurrentUser();
+  const [open, setOpen] = useState(false);
 
-    const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
 
-    const logout = () => {
+  const logout = () => {
+    authService.logout();
 
-        authService.logout();
+    navigate("/");
 
-        navigate("/");
+    window.location.reload();
+  };
 
-        window.location.reload();
-
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
     };
 
-    return (
+    document.addEventListener("mousedown", handleClickOutside);
 
-        <div className="user-menu">
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
-            <div
-                className="user-info"
-                onClick={() => setOpen(!open)}
-            >
+  return (
+    <div className="user-menu" ref={menuRef}>
+      <div className="user-info" onClick={() => setOpen(!open)}>
+        <FaUserCircle size={35} />
 
-                <FaUserCircle size={35} />
+        <span>{user.fullName}</span>
 
-                <span>{user.fullName}</span>
+        <FaChevronDown />
+      </div>
 
-                <FaChevronDown />
+      {open && (
+        <div className="dropdown">
+          <div onClick={() => navigate("/profile")}>Hồ sơ</div>
 
-            </div>
+          <div onClick={() => navigate("/settings")}>Cài đặt</div>
 
-            {
+          <hr />
 
-                open && (
-
-                    <div className="dropdown">
-
-                        <div onClick={() => navigate("/profile")}>
-
-                            Hồ sơ
-
-                        </div>
-
-                        <div onClick={() => navigate("/settings")}>
-
-                            Cài đặt
-
-                        </div>
-
-                        <hr />
-
-                        <div onClick={logout}>
-
-                            Đăng xuất
-
-                        </div>
-
-                    </div>
-
-                )
-
-            }
-
+          <div onClick={logout}>Đăng xuất</div>
         </div>
-
-    );
-
+      )}
+    </div>
+  );
 }

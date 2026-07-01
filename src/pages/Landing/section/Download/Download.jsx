@@ -19,9 +19,7 @@ export default function AppDownload() {
           </h2>
 
           <p>
-            Mang cả thế giới kiến thức và sự hỗ trợ chuyên nghiệp vào ngay trong
-            túi của bạn. Đăng ký ngay để nhận được tư vấn miễn phí từ chuyên gia
-            SSCare trong tuần đầu tiên.
+            Đồng hành cùng phụ huynh trong việc chăm sóc tuổi dậy thì của con.
           </p>
 
           <div className="qr-wrapper">

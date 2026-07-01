@@ -1,6 +1,8 @@
 import "./PostEditor.css";
 
 import { useState } from "react";
+import RejectSuccessModal from "./components/newPost/popup/RejectSuccessModal";
+import ApproveSuccessModal from "./components/newPost/popup/ApproveSuccessModal";
 
 import ArticleBasicInfo from "./components/newPost/basic/ArticleBasicInfo";
 import Sidebar from "../Posts/components/newPost/sidebar/Sidebar";
@@ -11,8 +13,11 @@ import { createEmptyArticle } from "../../utils/articleDefault";
 export default function PostEditor() {
   const [article, setArticle] = useState(createEmptyArticle);
 
+  const [showRejectModal, setShowRejectModal] = useState(false);
+  const [showApproveModal, setShowApproveModal] = useState(false);
+
   const loading = false;
-  
+
   const handlePreview = () => {
     console.log("Preview Article");
 
@@ -23,6 +28,18 @@ export default function PostEditor() {
     console.log("Submit Article");
 
     console.log(article);
+  };
+
+  const handleReject = async () => {
+    // await api.rejectArticle(id);
+
+    setShowRejectModal(true);
+  };
+
+  const handleApprove = async () => {
+    // await articleService.approve(id);
+
+    setShowApproveModal(true);
   };
   return (
     <div className="editor-page">
@@ -52,6 +69,18 @@ export default function PostEditor() {
         article={article}
         onPreview={handlePreview}
         onSubmit={handleSubmit}
+        onReject={handleReject}
+        onApprove={handleApprove}
+      />
+
+      <RejectSuccessModal
+        open={showRejectModal}
+        onClose={() => setShowRejectModal(false)}
+      />
+
+      <ApproveSuccessModal
+        open={showApproveModal}
+        onClose={() => setShowApproveModal(false)}
       />
     </div>
   );
